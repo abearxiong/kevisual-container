@@ -1,0 +1,58 @@
+{
+  "name": "@kevisual/container",
+  "version": "0.0.2",
+  "description": "",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./edit": {
+      "import": "./dist/edit.js",
+      "require": "./dist/edit.js"
+    },
+    "./container.css": {
+      "import": "./dist/container.css",
+      "require": "./dist/container.css"
+    }
+  },
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "start": "ts-node src/index.ts",
+    "watch": "rollup -c -w"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^12.1.0",
+    "@types/crypto-js": "^4.2.2",
+    "@types/react": "^18.3.4",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.22.4",
+    "rollup-plugin-copy": "^3.5.0",
+    "ts-lib": "^0.0.5",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "@emotion/css": "^11.13.0",
+    "crypto-js": "^4.2.0",
+    "eventemitter3": "^5.0.1"
+  },
+  "dependencies": {
+    "nanoid": "^5.0.7",
+    "zustand": "^4.5.5"
+  }
+}

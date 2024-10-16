@@ -1,0 +1,20 @@
+.kv-container.active {
+  background: #000 !important;
+  border: 2px solid #195ca9;
+  z-index: 100;
+}
+.kv-container.dragging {
+  opacity: 0.5; /* 拖动时降低透明度 */
+  box-sizing: content-box;
+  border: 2px dashed blue;
+}
+.kv-container.hover {
+  cursor: move;
+}
+.kv-container > .resizer, .kv-container > .drag-title {
+  display: none;
+}
+.kv-container.active > .resizer, .kv-container.active > .drag-title {
+  display: block;
+}
+
